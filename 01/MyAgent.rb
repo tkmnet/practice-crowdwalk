@@ -2,7 +2,7 @@
 require 'RubyAgentBase.rb'
 
 class MyAgent < RubyAgentBase
-  TriggerFilter = ["update", "calcSpeed"]
+  TriggerFilter = ["calcSpeed"]
 
   def initialize(*arg)
     super(*arg)
