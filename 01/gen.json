@@ -1,0 +1,18 @@
+#{ "version" : 2}
+[
+  {"rule":"EACH",
+    "agentType":{"className":"RubyAgent",
+      "rubyAgentClass":"MyAgent",
+      "myPlan": [
+        {"target":"l3", "mode":"wait", "value": 1800},
+        {"target":"l1", "mode":"stop", "value": 500},
+        {"target":"l2", "mode":"wait", "value": "19:00:00"},
+        {"target":"l3", "mode":"stop", "value": 500},
+        {"target":"l1", "mode":"wait", "value": "20:00:00"}
+      ]
+    },
+    "total":10,
+    "startPlace":"start",
+    "startTime":"18:00:00","duration":500.0,
+    "goal":"goal"}
+]
