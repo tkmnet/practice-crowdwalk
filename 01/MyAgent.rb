@@ -6,7 +6,7 @@ class MyAgent < RubyAgentBase
 
   def initialize(*arg)
     super(*arg)
-    @seatWidth = ItkTerm.getArg(@fallback, "seat_width").getDouble()
+    @seatWidth = default(0.5, ItkTerm.getArg(@fallback, "seat_width").getDouble())
     @myPlan = ItkTerm.toRuby(@config).to_hash["myPlan"]
     @planCursor = 0
     @myPlan.reverse.each { |plan|
@@ -21,9 +21,11 @@ class MyAgent < RubyAgentBase
     
     if @planCursor < @myPlan.length then
       if getCurrentLink.hasTag(@myPlan[@planCursor]["target"]) then
+        seatWidth = default(@seatWidth, @myPlan[@planCursor]["seatWidth"])
+        isPushing = default(false, @myPlan[@planCursor]["pushing"])
         place = @javaAgent.getCurrentPlace()
-        if @stopAt < 0.0 and place.getRemainingDistance() > (@seatWidth * (place.getIndexFromHeadingInLane(@javaAgent) +1)) then
-          distance = place.getRemainingDistance() - (@seatWidth * (place.getIndexFromHeadingInLane(@javaAgent) +1))
+        if (@stopAt < 0.0 or isPushing) and place.getRemainingDistance() > (seatWidth * (place.getIndexFromHeadingInLane(@javaAgent) +1)) then
+          distance = place.getRemainingDistance() - (seatWidth * (place.getIndexFromHeadingInLane(@javaAgent) +1))
           speed = (distance - speed <= 0.0) ? 0.2 : speed
         else
           time = getCurrentTime().getAbsoluteTime()
@@ -38,7 +40,6 @@ class MyAgent < RubyAgentBase
                 nextPlan()
               end
             else
-              p ["wait", value, getCurrentTime().getRelativeTime()]
               if value < getCurrentTime().getRelativeTime()
                 nextPlan()
               end
@@ -64,5 +65,8 @@ class MyAgent < RubyAgentBase
     @stopAt = -1.0
   end
 
+  def default(defaultValue, value)
+    return value.nil? ? defaultValue : value
+  end
 end
 
