@@ -1,0 +1,7 @@
+#{ "version" : 2}
+[
+  {"rule":"RUBY",
+    "ruleClass":"MyFactory",
+    "config":{"generation_file":"gen.json"}
+  }
+]

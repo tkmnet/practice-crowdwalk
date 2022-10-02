@@ -1,0 +1,45 @@
+#{ "version" : 2}
+[
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "myPlan": [
+        {"target":"l3", "mode":"stop", "value": 500, "pushing": true},
+        {"target":"l1", "mode":"wait", "value": 2400},
+        {"target":"l2", "mode":"stop", "value": 500, "seatWidth": 20},
+        {"target":"l3", "mode":"stop", "value": 500},
+        {"target":"l1", "mode":"wait", "value": "19:30:00"}
+      ]
+    },
+    "total":10,
+    "startPlace":"start",
+    "startTime":"18:00:00","duration":500.0,
+    "goal":"l3"},
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "myPlan": [
+        {"target":"l3", "mode":"stop", "value": 500, "pushing": true},
+        {"target":"l1", "mode":"wait", "value": 2400},
+        {"target":"l2", "mode":"stop", "value": 500, "seatWidth": 20},
+        {"target":"l3", "mode":"stop", "value": 500},
+        {"target":"l1", "mode":"wait", "value": "19:30:00"}
+      ]
+    },
+    "total":10,
+    "startPlace":"start",
+    "startTime":"18:00:00","duration":500.0,
+    "goal":"l3"},
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "myPlan": [
+        {"target":"l3", "mode":"stop", "value": 500, "pushing": true},
+        {"target":"l1", "mode":"wait", "value": 2400},
+        {"target":"l2", "mode":"stop", "value": 500, "seatWidth": 20},
+        {"target":"l3", "mode":"stop", "value": 500},
+        {"target":"l1", "mode":"wait", "value": "19:30:00"}
+      ]
+    },
+    "total":10,
+    "startPlace":"start",
+    "startTime":"19:00:00","duration":500.0,
+    "goal":"l3"}
+]
