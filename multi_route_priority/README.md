@@ -1,4 +1,4 @@
-# Multi Priority Route
+# Multi-Route Priority
 エージェントタイプごとに優先ルートが異なる場合
 
 ## Map
