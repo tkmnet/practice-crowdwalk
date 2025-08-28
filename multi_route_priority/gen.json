@@ -1,0 +1,36 @@
+#{ "version" : 2}
+[
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "mentalMode":"agentTypeA"
+    },
+    "total":25,
+    "startPlace":"start1",
+    "startTime":"18:00:00","duration":300.0,
+    "goal":"goal"},
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "mentalMode":"agentTypeB"
+    },
+    "total":25,
+    "startPlace":"start1",
+    "startTime":"18:00:00","duration":300.0,
+    "goal":"goal"},
+
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "mentalMode":"agentTypeA"
+    },
+    "total":25,
+    "startPlace":"start2",
+    "startTime":"18:00:00","duration":300.0,
+    "goal":"goal"},
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent",
+      "mentalMode":"agentTypeB"
+    },
+    "total":25,
+    "startPlace":"start2",
+    "startTime":"18:00:00","duration":300.0,
+    "goal":"goal"}
+]

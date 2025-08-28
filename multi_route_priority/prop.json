@@ -1,0 +1,23 @@
+{
+  "__0":"NetmasCuiSimulator",
+  "debug":true,
+  "io_handler_type":"none",
+  "map_file":"map.xml",
+  "generation_file":"gen.json",
+  "scenario_file":"scnr.json",
+  "fallback_file":"fb.json",
+  "agent_size": 10,
+  "interval":0,
+  "randseed":2524,
+  "random_navigation":true,
+  "loop_count":1,
+  "exit_count":0,
+  "all_agent_speed_zero_break":false,
+
+  "mental_map_rules": {
+    "agentTypeA": ["if", {"":"hasTag", "tag":"priorityA"}, ["/", ":length", 4], ":length"],
+    "agentTypeB": ["if", {"":"hasTag", "tag":"priorityB"}, ["/", ":length", 4], ":length"]
+  },
+
+  "___":null
+}
