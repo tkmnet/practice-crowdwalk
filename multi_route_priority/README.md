@@ -20,10 +20,10 @@
     "agentTypeB": ["if", {"":"hasTag", "tag":"priorityB"}, ["/", ":length", 4], ":length"]
 }
 ```
-priority?のLinkの長さを$1/4$と認識させる
+priority?のLinkの長さを $1/4$ と認識させる
 
 ### Agent Generation
-``
+`gen.json`
 ```json
 "agentType": {"className":"RationalAgent",
     "mentalMode":"agentTypeA"
