@@ -3,10 +3,14 @@
 
 ## Map
 ![Map](./map.png)
+![Map2D](./map2d.png)
 
 ## Design
 - HIDDENタグを付けたリンクを表示しない
 - HIDDENタグを付けたリンクを通行中のエージェントの表示色を白にする
+
+## Note
+3Dビューワは，色の更新タイミングに不具合があるため，HIDDEN区間でエージェントの色が付いたままになることがある．
 
 ## Implementation
 ### Link Appearance
