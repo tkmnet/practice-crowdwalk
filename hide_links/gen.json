@@ -1,0 +1,9 @@
+#{ "version" : 2}
+[
+  {"rule":"EACH",
+    "agentType":{"className":"RationalAgent"},
+    "total":100,
+    "startPlace":"start",
+    "startTime":"18:00:00","duration":300.0,
+    "goal":"goal"}
+]

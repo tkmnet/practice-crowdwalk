@@ -1,0 +1,23 @@
+{
+  "__0":"NetmasCuiSimulator",
+  "debug":true,
+  "io_handler_type":"none",
+  "map_file":"map.xml",
+  "generation_file":"gen.json",
+  "scenario_file":"scnr.json",
+  "fallback_file":"fb.json",
+  "agent_size": 10,
+  "interval":0,
+  "randseed":2524,
+  "random_navigation":true,
+  "loop_count":1,
+  "exit_count":0,
+  "all_agent_speed_zero_break":false,
+
+  "link_appearance_file":"link_appearance.json",
+  "agent_appearance_file":"agent_appearance.json",
+  "use_ruby": true,
+  "ruby_init_script":"require './HideableAgentColor.rb'",
+
+  "___":null
+}
